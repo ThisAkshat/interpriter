@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  camera: ^0.10.5+9
+  http: ^1.2.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -70,6 +72,7 @@ flutter:
      - assests/images/signbridgelogo.png
      - assests/
      - assests/images/Three_People.png
+     - assests/eightSign.png
 
   #   - images/a_dot_ham.jpeg
 

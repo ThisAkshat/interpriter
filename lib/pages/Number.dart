@@ -64,7 +64,7 @@ class NumberPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
 
-                // Grid of 10 boxes with numbers 0-9 in the upper-left corner
+                // Grid of 10 boxes with numbers 0-9 in a logical layout
                 Expanded(
                   child: GridView.builder(
                     padding: const EdgeInsets.all(16.0),
@@ -94,6 +94,8 @@ class NumberPage extends StatelessWidget {
                         imagePath = 'assests/sixSign.png'; // Image for 6
                       } else if (index == 7) {
                         imagePath = 'assests/sevenSign.png'; // Image for 7
+                      } else if (index == 8) {
+                        imagePath = 'assests/eightSign.png'; // Image for 8
                       } else if (index == 9) {
                         imagePath = 'assests/nineSign.png'; // Image for 9
                       }
@@ -122,12 +124,12 @@ class NumberPage extends StatelessWidget {
                             if (imagePath.isNotEmpty)
                               Positioned(
                                 bottom: 8.0,
-                                right: 10.0,
+                                right: 8.0,
+                                left: 12.0, // Adjust width within the box
+                                top: 50.0, // Provide top margin for better scaling
                                 child: Image.asset(
                                   imagePath, // Correct path for the image
-                                  width: 100, // Adjust the width of the image as needed
-                                  height: 100, // Adjust the height of the image as needed
-                                  fit: BoxFit.contain, // Maintain the aspect ratio
+                                  fit: BoxFit.contain, // Ensure the image fits well
                                 ),
                               ),
                           ],

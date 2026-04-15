@@ -6,9 +6,11 @@ import 'ATS.dart'; // Import your ATS.dart file (make sure ATS.dart exists)
 import 'STT.dart'; // Import your STT.dart file (make sure STT.dart exists)
 import 'ABCI.dart'; // Import the ABCI.dart file
 import 'more.dart'; // Import the new more.dart file
+import 'sign_detector_page.dart';
 
 class HomePage extends StatelessWidget implements NavigationStates {
   const HomePage({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -243,7 +245,12 @@ class HomePage extends StatelessWidget implements NavigationStates {
                         child: IconButton(
                           icon: const Icon(Icons.video_call, size: 30, color: Colors.white),
                           onPressed: () {
-                            // Add your video call functionality here
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SignDetectorPage(),
+                              ),
+                            );
                           },
                         ),
                       ),
